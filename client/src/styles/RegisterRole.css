@@ -1,0 +1,130 @@
+.registerstudent-container
+{
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+    padding: 4vw 0;
+    align-items: center;
+    background-color: maroon;
+}
+
+.registerstudent-container form
+{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    padding-top: 3vw;
+    padding-bottom: 4vw;
+    border-radius: 1vw;
+    align-items: center;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.registerstudent-container h1
+{
+    margin: 0;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-size: 2vw;
+    color: maroon;
+}
+
+.registerstudent-container p
+{
+    margin: 0;
+    margin-bottom: 2vw;
+    font-size: 1.2vw;
+}
+
+.registerstudent-container hr
+{
+    width: 60%;
+    margin-bottom: 2vw;
+    border-top: 0.2vw solid maroon;
+}
+
+.register-section
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+}
+
+.register-section h2
+{ 
+    margin: 0;
+    margin-bottom: 2vw;
+    font-size: 1.5vw;
+}
+
+.register-input
+{
+    display: flex;
+    margin-bottom: 1vw;
+    align-items: center;
+}
+
+.register-input label
+{
+    width: 8vw;
+    font-size: 1.1vw;
+}
+
+.register-input input
+{
+    padding: 0.5vw;
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
+    background-color: #EEE;
+}
+
+.register-input input:focus
+{
+    background-color: white;
+}
+
+.register-buttons
+{
+    display: flex;
+    margin-top: 1vw;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.register-buttons button:first-child
+{
+    padding: 0.5vw 1vw;
+    border: 1px solid maroon;
+    border-radius: 0.5vw;
+    font-weight: 600;
+    font-size: 1.1vw;
+    background-color: white;
+    color: maroon;
+    cursor: pointer;
+}
+
+.register-buttons button:last-child
+{
+    padding: 0.6vw 2vw;
+    font-weight: 600;
+    font-size: 1.1vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: maroon;
+    color: gold;
+    cursor: pointer;
+}
+
+.register-buttons button:first-child:hover
+{
+    background-color: #DDD;
+}
+
+.register-buttons button:last-child:hover
+{
+    color: white;
+}
