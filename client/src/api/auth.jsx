@@ -21,7 +21,7 @@ export const loginUser = async(role, email, password) =>
         {
             alert('Student login successful!');
         }
-        else if(response.ok && role === 'student')
+        else if(response.ok && role === 'staff')
         {
             alert('Staff login successful!');
         }
@@ -40,14 +40,14 @@ export const loginUser = async(role, email, password) =>
     }
 };
 
-// POST: Register student
-export const registerStudent = async(formData) =>
+// POST: Register user
+export const registerUser = async(role, formData) =>
 {
     try
     {
         const response = await fetch
         (
-            'http://localhost:8080/api/student/register',
+            `http://localhost:8080/api/${role}/register`,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
