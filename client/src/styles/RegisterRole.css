@@ -1,14 +1,13 @@
-.registerstudent-container
+.registerrole-container
 {
     display: flex;
     flex-direction: column;
-    height: 150vh;
     padding: 4vw 0;
     align-items: center;
     background-color: maroon;
 }
 
-.registerstudent-container form
+.registerrole-container form
 {
     display: flex;
     flex-direction: column;
@@ -22,7 +21,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.registerstudent-container h1
+.registerrole-container h1
 {
     margin: 0;
     margin-top: 1vw;
@@ -31,14 +30,14 @@
     color: maroon;
 }
 
-.registerstudent-container p
+.registerrole-container p
 {
     margin: 0;
     margin-bottom: 2vw;
     font-size: 1.2vw;
 }
 
-.registerstudent-container hr
+.registerrole-container hr
 {
     width: 60%;
     margin-bottom: 2vw;

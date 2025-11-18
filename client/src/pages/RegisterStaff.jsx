@@ -2,7 +2,7 @@ import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import '../styles/RegisterRole.css';
 
-export default function RegisterStudent()
+export default function RegisterStaff()
 {
     return (
         <>
@@ -10,7 +10,7 @@ export default function RegisterStudent()
             <Header/>
             <main className="registerrole-container">
                 <form>
-                    <h1> Student Registration </h1>
+                    <h1> Staff Registration </h1>
                     <p> Please enter your details </p>
                     <hr/>
                     {/* Section 1: Personal Information */}
@@ -25,21 +25,6 @@ export default function RegisterStudent()
                         <div className="register-input">
                             <label htmlFor="lastname"> Last Name </label>
                             <input id="lastname" type="text" required/>
-                        </div>
-                        {/* Program */}
-                        <div className="register-input">
-                            <label htmlFor="program"> Program </label>
-                            <input id="program" type="text" required/>
-                        </div>
-                        {/* Year Level */}
-                        <div className="register-input">
-                            <label htmlFor="yearlvl"> Year Level </label>
-                            <input id="yearlvl" type="number" min="1" max="5" required/>
-                        </div>
-                        {/* Contact Number */}
-                        <div className="register-input">
-                            <label htmlFor="contactnum"> Contact No. </label>
-                            <input id="contactnum" type="text" required/>
                         </div>
                     </div>
                     {/* Section 2: Login Credentials */}
