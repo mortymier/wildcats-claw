@@ -13,15 +13,15 @@ export default function Header()
             </Link>
             <nav>
                 <ul>
-                    <li> <Link> Home </Link> </li>
-                    <li> <Link> About </Link> </li>
-                    <li> <Link> Contact </Link> </li>
-                    <li> <Link> News </Link> </li>
+                    <li> <Link to="/"> Home </Link> </li>
+                    <li> <Link to="/"> About </Link> </li>
+                    <li> <Link to="/"> Contact </Link> </li>
+                    <li> <Link to="/"> News </Link> </li>
                 </ul>
             </nav>
             <div className="auth-buttons">
-                <Link> Login </Link>
-                <Link> Register </Link>
+                <Link to="/login"> Login </Link>
+                <Link to="/register"> Register </Link>
             </div>
         </header>
     );
