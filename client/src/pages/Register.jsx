@@ -14,9 +14,9 @@ export default function Register()
                     <h1> User Registration </h1>
                     <p> Please select role: </p>
                     <hr/>
-                    <Link> STUDENT </Link>
+                    <Link to="/register/student"> STUDENT </Link>
                     <p> or </p>
-                    <Link> STAFF </Link>
+                    <Link to="/register/staff"> STAFF </Link>
                 </div>
             </main>
             <Footer/>
