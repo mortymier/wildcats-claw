@@ -1,15 +1,57 @@
+import { useNavigate } from 'react-router-dom'; 
+import { useState } from 'react';
+import { registerUser } from '../api/auth.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import '../styles/RegisterRole.css';
 
 export default function RegisterStaff()
 {
+    const navigate = useNavigate();
+    const [confirm, setConfirm] = useState('');
+    const [formData, setFormData] = useState
+    ({
+        firstname: '',
+        lastname: '',
+        email: '',
+        password: ''
+    });
+
+    const handleCancel = () => 
+    {
+        navigate('/register');
+    };
+
+    const handleChange = (e) =>
+    {
+        const {name, value} = e.target;
+        setFormData({...formData, [name]: value});
+    };
+
+    const handleSubmit = async(e) =>
+    {
+        e.preventDefault();
+
+        if(formData.password !== confirm)
+        {
+            alert("Passwords do not match");
+        }
+        else if(window.confirm('Proceed with registration?'))
+        {
+            const role = 'staff';
+            const response = await registerUser(role, formData);
+
+            if(response.ok)
+                navigate("/login");
+        }
+    };
+
     return (
         <>
             <title> Register - Wildcats CLAW </title>
             <Header/>
             <main className="registerrole-container">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <h1> Staff Registration </h1>
                     <p> Please enter your details </p>
                     <hr/>
@@ -19,12 +61,26 @@ export default function RegisterStaff()
                         {/* First Name */}
                         <div className="register-input">
                             <label htmlFor="firstname"> First Name </label>
-                            <input id="firstname" type="text" required/>
+                            <input 
+                                id="firstname" 
+                                name="firstname"
+                                type="text" 
+                                value={formData.firstname}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
                         {/* Last Name */}
                         <div className="register-input">
                             <label htmlFor="lastname"> Last Name </label>
-                            <input id="lastname" type="text" required/>
+                            <input 
+                                id="lastname"
+                                name="lastname" 
+                                type="text" 
+                                value={formData.lastname}
+                                onChange={handleChange}
+                                required
+                            />
                         </div>
                     </div>
                     {/* Section 2: Login Credentials */}
@@ -33,22 +89,43 @@ export default function RegisterStaff()
                         {/* Email */}
                         <div className="register-input">
                             <label htmlFor="email"> Email </label>
-                            <input id="email" type="email" required/>
+                            <input 
+                                id="email" 
+                                name="email"
+                                type="email" 
+                                value={formData.email} 
+                                onChange={handleChange} 
+                                required
+                            />
                         </div>
                         {/* Password */}
                         <div className="register-input">
                             <label htmlFor="password"> Password </label>
-                            <input id="password" type="password" required/>
+                            <input 
+                                id="password" 
+                                name="password"
+                                type="password" 
+                                value={formData.password} 
+                                onChange={handleChange} 
+                                required
+                            />
                         </div>
                         {/* Confirm Password */}
                         <div className="register-input">
                             <label htmlFor="confirm"> Confirm </label>
-                            <input id="confirm" type="password" required/>
+                            <input 
+                                id="confirm" 
+                                name="confirm"
+                                type="password" 
+                                value={confirm} 
+                                onChange={(e) => setConfirm(e.target.value)} 
+                                required
+                            />
                         </div>
                     </div>
                     {/* Buttons */}
                     <div className="register-buttons">
-                        <button type="button"> Cancel </button>
+                        <button type="button" onClick={handleCancel}> Cancel </button>
                         <button type="submit"> Register </button>
                     </div>
                 </form>

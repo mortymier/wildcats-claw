@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'; 
 import { useState } from 'react';
-import { registerStudent } from '../api/auth.jsx';
+import { registerUser } from '../api/auth.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import '../styles/RegisterRole.css';
@@ -41,7 +41,8 @@ export default function RegisterStudent()
         }
         else if(window.confirm('Proceed with registration?'))
         {
-            const response = await registerStudent(formData);
+            const role = 'student';
+            const response = await registerUser(role, formData);
 
             if(response.ok)
                 navigate("/login");
