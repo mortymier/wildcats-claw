@@ -65,12 +65,12 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 1vw;
-    color: maroon;
-    background-color: gold;
+    background-color: maroon;
+    color: white;
 }
 
 .register-container a:hover
 {
-    border: 0.2vw solid crimson;
-    color: crimson;
+    border: 0.2vw solid gold;
+    color: gold;
 }

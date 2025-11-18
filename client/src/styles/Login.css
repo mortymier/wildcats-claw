@@ -89,7 +89,7 @@
 .login-buttons
 {
     display: flex;
-    margin-top: 3vw;
+    margin-top: 4vw;
     align-items: center;
     justify-content: center;
     gap: 1vw;
@@ -98,7 +98,7 @@
 .login-buttons button:first-child
 {
     padding: 0.5vw 1vw;
-    border: 1px solid maroon;
+    border: 0.2vw solid maroon;
     border-radius: 0.5vw;
     font-weight: 600;
     font-size: 1.1vw;
@@ -112,19 +112,20 @@
     padding: 0.6vw 2vw;
     font-weight: 600;
     font-size: 1.1vw;
-    border: none;
+    border: 0.2vw solid maroon;
     border-radius: 0.5vw;
     background-color: maroon;
-    color: gold;
+    color: white;
     cursor: pointer;
 }
 
 .login-buttons button:first-child:hover
 {
-    background-color: #DDD;
+    background-color: #CCC;
 }
 
 .login-buttons button:last-child:hover
 {
-    color: white;
+    border: 0.2vw solid gold;
+    color: gold;
 }
