@@ -3,13 +3,14 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    heigth: 90vh;
 }
 
 .home-container img
 {
     display: block;
     width: 100%;
-    height: 35vw;
+    height: 74vh;
 }
 
 @keyframes slide-left
@@ -25,7 +26,7 @@
     position: absolute;
     z-index: 1;
     width: 75%;
-    height: 35vw;
+    height: 74vh;
     padding-right: 0vw;
     align-self: flex-end;
     align-items: flex-end;
