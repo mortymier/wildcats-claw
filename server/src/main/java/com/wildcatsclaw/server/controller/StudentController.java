@@ -28,6 +28,7 @@ public class StudentController
     }
 
     // POST: Login student
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @PostMapping("/login")
     public ResponseEntity<StudentEntity> loginStudent(@RequestBody LoginRequestDTO request)
     {

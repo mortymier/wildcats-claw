@@ -28,6 +28,7 @@ public class StaffController
     }
 
     // POST: Login staff
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @PostMapping("/login")
     public ResponseEntity<StaffEntity> loginStaff(@RequestBody LoginRequestDTO request)
     {
