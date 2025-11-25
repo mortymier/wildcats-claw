@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { registerUser } from '../api/auth.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
+import user_icon from '../images/user_icon.png';
+import lock_icon from '../images/lock_icon.png';
 import '../styles/RegisterRole.css';
 
 export default function RegisterStudent()
@@ -37,7 +39,7 @@ export default function RegisterStudent()
 
         if(formData.password !== confirm)
         {
-            alert("Passwords do not match");
+            alert('Passwords do not match');
         }
         else if(window.confirm('Proceed with registration?'))
         {
@@ -45,7 +47,7 @@ export default function RegisterStudent()
             const response = await registerUser(role, formData);
 
             if(response.ok)
-                navigate("/login");
+                navigate('/login');
         }
     };
 
@@ -60,7 +62,10 @@ export default function RegisterStudent()
                     <hr/>
                     {/* Section 1: Personal Information */}
                     <div className="register-section">
-                        <h2> Personal Information </h2>
+                        <div className="rs-header">
+                            <img src={user_icon} alt="Personal information icon"/>
+                            <h2> Personal Information </h2>
+                        </div>
                         {/* First Name */}
                         <div className="register-input">
                             <label htmlFor="firstname"> First Name </label>
@@ -68,6 +73,7 @@ export default function RegisterStudent()
                                 id="firstname" 
                                 name="firstname"
                                 type="text" 
+                                placeholder="Juan" 
                                 value={formData.firstname}
                                 onChange={handleChange}
                                 required
@@ -80,6 +86,7 @@ export default function RegisterStudent()
                                 id="lastname"
                                 name="lastname" 
                                 type="text" 
+                                placeholder="Dela Cruz" 
                                 value={formData.lastname}
                                 onChange={handleChange}
                                 required
@@ -92,6 +99,7 @@ export default function RegisterStudent()
                                 id="program" 
                                 name="program" 
                                 type="text" 
+                                placeholder="BSIT" 
                                 value={formData.program} 
                                 onChange={handleChange} 
                                 required
@@ -126,7 +134,10 @@ export default function RegisterStudent()
                     </div>
                     {/* Section 2: Login Credentials */}
                     <div className="register-section">
-                        <h2> Login Credentials </h2>
+                        <div className="rs-header">
+                            <img src={lock_icon} alt="Login credentials icon"/>
+                            <h2> Login Credentials </h2>
+                        </div>
                         {/* Email */}
                         <div className="register-input">
                             <label htmlFor="email"> Email </label>
@@ -134,6 +145,7 @@ export default function RegisterStudent()
                                 id="email" 
                                 name="email"
                                 type="email" 
+                                placeholder="juandelacruz@example.com"
                                 value={formData.email} 
                                 onChange={handleChange} 
                                 required

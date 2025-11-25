@@ -49,12 +49,25 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2vw;
+    width: 60%;
 }
 
-.register-section h2
-{ 
-    margin: 0;
+.rs-header
+{
+    display: flex;
+    align-items: center;
     margin-bottom: 2vw;
+    gap: 1vw;
+}
+
+.rs-header img
+{
+    width: 1.5vw;
+}
+
+.rs-header h2
+{ 
+    margin: 0;  
     font-size: 1.5vw;
 }
 
@@ -74,6 +87,7 @@
 .register-input input
 {
     padding: 0.5vw;
+    width: 80%;
     border: 1px solid black;
     border-radius: 0.5vw;
     font-size: 1.1vw;
