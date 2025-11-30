@@ -19,11 +19,11 @@ export const loginUser = async(role, email, password) =>
 
         if(response.ok && role === 'student')
         {
-            alert('Student login successful!');
+            return response;
         }
         else if(response.ok && role === 'staff')
         {
-            alert('Staff login successful!');
+            return response;
         }
         else if(response.status === 401)
         {
@@ -37,6 +37,7 @@ export const loginUser = async(role, email, password) =>
     catch(error)
     {
         alert(error.message);
+        return { success: false, error };
     }
 };
 
@@ -72,5 +73,6 @@ export const registerUser = async(role, formData) =>
     catch(error)
     {
         alert(error.message);
+        return { success: false, error };
     }
 };

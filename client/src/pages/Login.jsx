@@ -25,7 +25,20 @@ export default function Login()
         e.preventDefault();
 
         const response = await loginUser(role, email, password);
-    }
+
+        if(response.ok && role === 'student')
+        {
+            const studentData = await response.json();
+            localStorage.setItem('loggedInStudent', JSON.stringify(studentData))
+            navigate('/student/dashboard');
+        }
+        else if( role === 'staff')
+        {
+            const staffData = await response.json();
+            localStorage.setItem('loggedInStaff', JSON.stringify(staffData));
+            navigate('/staff/dashboard');
+        }
+    };
 
     return (
         <>
