@@ -1,0 +1,74 @@
+.studentdashboard-container
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    border-top: 0.2vw solid maroon;
+}
+
+.studentdashboard-container h1
+{
+    margin: 0;
+    margin-left: 8vw;
+    margin-bottom: 4vw;
+    font-size: 2vw;
+    color: maroon;
+}
+
+.studentdashboard-container h2
+{
+    margin: 0;
+    margin-left: 8vw;
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+}
+
+.studentdashboard-container table
+{
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 6vw;
+    border: 0.1vw solid #CCC;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.studentdashboard-container tr
+{
+    border-bottom: 0.1vw solid #CCC;
+}
+
+.studentdashboard-container tr:nth-child(2n)
+{
+    background-color: #EEE;
+}
+
+.studentdashboard-container th
+{
+    padding: 0.5vw 1vw;
+    text-align: left;
+    font-size: 1.1vw;
+    background-color: maroon;
+    color: #FFF;
+}
+
+.studentdashboard-container td
+{
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    text-align: left;
+}
+
+.studentdashboard-container .borrows-table:first-of-type tr td:last-child
+{
+    font-weight: 600;
+    color: gold;
+}
+
+.studentdashboard-container .borrows-table:last-of-type tr td:last-child
+{
+    font-weight: 600;
+    color: green;
+}
