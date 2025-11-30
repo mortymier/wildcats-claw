@@ -80,7 +80,7 @@
     font-size: 1.1vw;
 }
 
-.auth-buttons a
+.auth-buttons a, .auth-buttons button
 {
     padding: 0.75vw 2vw;
     border: none;
@@ -102,6 +102,13 @@
     background-color: maroon;
 }
 
+.auth-buttons button
+{
+    font-size: 1.1vw;
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
+}
 
 .auth-buttons a:first-child:hover
 {
@@ -111,4 +118,9 @@
 .auth-buttons a:last-child:hover
 {
     color: white;
+}
+
+.auth-buttons button:hover
+{
+    color: gold;
 }
