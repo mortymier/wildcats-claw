@@ -51,6 +51,7 @@ public class LaptopService
     }
 
     // UPDATE LAPTOP STATUS
+    @SuppressWarnings({ "null", "finally" })
     public LaptopEntity updateLaptopStatus(LaptopEntity.LaptopStatus newstatus, LaptopEntity laptop)
     {
         LaptopEntity updatedLaptop = new LaptopEntity();

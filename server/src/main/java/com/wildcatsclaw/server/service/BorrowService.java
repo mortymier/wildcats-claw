@@ -64,6 +64,7 @@ public class BorrowService
     }
 
     // UPDATE BORROW STATUS
+    @SuppressWarnings({ "null", "finally" })
     public BorrowEntity updateBorrowStatus(BorrowEntity.BorrowStatus newstatus, BorrowEntity borrow)
     {
         BorrowEntity updatedBorrow = new BorrowEntity();
