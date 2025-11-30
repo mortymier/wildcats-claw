@@ -1,0 +1,178 @@
+.schedules-container
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    border-top: 0.2vw solid maroon;
+}
+
+.schedules-header 
+{
+    display: flex;
+    margin: 0;
+    margin-left: 10vw;
+    margin-bottom: 1vw;
+    align-items: center;
+}
+
+.schedules-header h2
+{  
+    width: 75%;
+    font-size: 1.5vw;
+}
+
+.schedules-header span
+{
+    color: maroon;
+}
+
+.schedules-header button
+{
+    padding: 0.5vw 1vw;
+    border: 0.2vw solid maroon;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
+    font-weight: 600;
+    background-color: white;
+    color: maroon;
+    cursor: pointer;
+    justify-self: flex-end;
+}
+
+.schedules-header button:hover
+{
+    background-color: maroon;
+    color: white;
+}
+
+.schedules-table
+{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 6vw;
+    border: 0.1vw solid #CCC;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.schedules-table tr
+{
+    border-bottom: 0.1vw solid #CCC;
+}
+
+.schedules-table tr:nth-child(2n)
+{
+    background-color: #EEE;
+}
+
+.schedules-table th
+{
+    padding: 0.5vw 1vw;
+    text-align: left;
+    font-size: 1.1vw;
+    background-color: maroon;
+    color: #FFF;
+}
+
+.schedules-table td
+{
+    padding: 0.5vw 1vw;
+    font-size: 1.1vw;
+    text-align: left;
+}
+
+.schedules-container form
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto 3vw auto;
+    padding: 3vw 8vw;
+    border: 0.1vw solid maroon;
+    border-radius: 1vw;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.schedules-container form h2
+{
+    margin: 0 0 3vw 0;
+    text-align: center;
+    font-size: 1.5vw;
+    color: maroon;
+}
+
+.schedules-input
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vw;
+    gap: 1vw;
+}
+
+.schedules-input label
+{
+    width: 8vw;
+    font-size: 1vw;
+    font-weight: 600;
+    color: #333;
+}
+
+.schedules-input input, .schedules-input select
+{
+    flex: 1;
+    padding: 0.5vw;
+    border: 0.1vw solid #666;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    background-color: #DDD;
+}
+
+.schedules-input input:focus, .schedules-input select:focus
+{
+    background-color: white;
+}
+
+.schedules-buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 2vw;
+}
+
+.schedules-buttons button:first-child
+{
+    padding: 0.6vw 2vw;
+    font-weight: 600;
+    font-size: 1.1vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: maroon;
+    color: white;
+    cursor: pointer;
+}
+
+.schedules-buttons button:last-child
+{
+    padding: 0.5vw 1vw;
+    border: 0.2vw solid maroon;
+    border-radius: 0.5vw;
+    font-weight: 600;
+    font-size: 1.1vw;
+    background-color: white;
+    color: maroon;
+    cursor: pointer;
+}
+
+.schedules-buttons button:first-child:hover
+{
+    color: gold;
+}
+
+.schedules-buttons button:last-child:hover
+{
+    background-color: #DDD;
+}
